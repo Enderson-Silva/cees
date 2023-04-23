@@ -1,0 +1,17 @@
+{
+    "name": "enderson/cees",
+    "description": "Gerenciador de dependências do sistema da escola CEES Cursos",
+    "autoload": {
+        "psr-4": {
+            "teste\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Enderson"
+        }
+    ],
+    "require": {
+        "phpoffice/phpword": "^1.0"
+    }
+}
