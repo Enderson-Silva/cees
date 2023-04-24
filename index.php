@@ -22,6 +22,78 @@ $temp->setValue("cpf", "12.1346.135-34");
 </head>
 <body>
 	<div class="general">
+		<div class="fixed-screens">
+			<div class="login-background">
+				<div class="login">
+					<div class="login-left">
+						<div class="icon-cees-content">
+							<img src="resources/img/icon-cees.png">
+						</div>
+						<div class="title-login">
+							<h1>Centro Especializado Espaço Sorriso</h1>
+						</div>
+					</div>
+					<div class="login-right">
+						<div class="icon-user-login">
+							<div>
+								<img src="resources/img/icon-user.svg"/>
+							</div>
+						</div>
+						<div class="title-form-login">
+							Login
+						</div>
+						<div class="form-login">
+							<div class="input-content">
+								<div class="icon-content">
+									<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="64" height="64" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+	  									<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+	  									<circle cx="12" cy="7" r="4" />
+	 									<path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+									</svg>
+								</div>
+								<input type="text" placeholder="Digite seu nome" name=""/>
+							</div>
+							<div class="input-content">
+								<div class="icon-content">
+									<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-lock" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+									  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+									  <rect x="5" y="11" width="14" height="10" rx="2" />
+									  <circle cx="12" cy="16" r="1" />
+									  <path d="M8 11v-4a4 4 0 0 1 8 0v4" />
+									</svg>
+								</div>
+								<input type="text" placeholder="Digite sua senha" name=""/>
+							</div>
+							<div class="button-form-login">
+								Entrar
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="new-record-comercial-background">
+				<div class="form-comercial">
+					<div class="contacts">
+						<div class="contact-one">
+							<input type="text" placeholder="Nome" name="">
+							<input type="text" placeholder="Número" name="" id="jojo"/>
+						</div>
+						<div class="contact-two">
+							
+						</div>
+					</div>
+					<div class="date-time">
+
+					</div>
+					<div class="status-tag">
+						
+					</div>
+					<div class="description">
+						
+					</div>
+				</div>
+			</div>
+		</div>
 		<nav class="navegation">
 			<div class="logo-cees">
 				<img src="https://i.imgur.com/SYDXHEE.png"/>
@@ -419,5 +491,6 @@ $temp->setValue("cpf", "12.1346.135-34");
 			</div>
 		</main>
 	</div>
+	<script src="resources/js/main.js"></script>
 </body>
 </html>
