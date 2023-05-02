@@ -1,9 +1,9 @@
-var input = document.querySelector("#jojo");
+import login from "./login.js";
 
-input.addEventListener("keyup", (event) => {
-	event.target.value = event.target.value.replace(/\D/g, '');
-	event.target.value = event.target.value.replace(/([0-9]{2})/, '($1) ');
-	event.target.value = event.target.value.replace(/([0-9]{5})([0-9]{4})/, '$1-$2');
+class Main {
+	constructor(){
+		this.login = new login();
+	}
+}
 
-	//event.target.value = event.target.value.replace(/([0-9]{3})([0-9]{3})([0-9]{3})([0-9]{2})/, "$1.$2.$3-$4");
-})
+var main = new Main();
