@@ -1,6 +1,11 @@
 export default class Login {
 	constructor(){
+		this.main;
 		this.run();
+	}
+
+	setInstance(main){
+		this.main = main;
 	}
 
 	async run(){
@@ -35,8 +40,6 @@ export default class Login {
 	}
 
 	async checkLogin(name, password){
-		let namei = document.getElementsByName("form-login-name")[0].disabled = true;
-		let passwordi = document.getElementsByName("form-login-password")[0].desabled;
 		let checkLogin = await fetch("app/checkLogin.php", {
 			method: "post",
 			body: JSON.stringify({
@@ -45,8 +48,13 @@ export default class Login {
 			})
 		});
 
-		let result = await checkLogin.text();
-
+		let result = await checkLogin.json();
 		console.log(result);
+
+		if(result["sucess"]){
+			this.main.render.renderAfterLogin(result['data']);
+		}else{
+			alert("sdfg");
+		}
 	}
 }

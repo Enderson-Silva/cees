@@ -61,7 +61,7 @@ $temp->setValue("cpf", "12.1346.135-34");
 	 									<path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
 									</svg>
 								</div>
-								<input type="text" placeholder="Digite seu nome" name="form-login-name"/>
+								<input type="text" placeholder="Digite seu nome" name="form-login-name" autocomplete="off"/>
 							</div>
 							<div class="input-content">
 								<div class="icon-content">
@@ -72,7 +72,7 @@ $temp->setValue("cpf", "12.1346.135-34");
 									  <path d="M8 11v-4a4 4 0 0 1 8 0v4" />
 									</svg>
 								</div>
-								<input type="text" placeholder="Digite sua senha" name="form-login-password"/>
+								<input type="text" placeholder="Digite sua senha" name="form-login-password" autocomplete="off"/>
 							</div>
 							<div class="button-form-login">
 								Entrar
@@ -293,185 +293,8 @@ $temp->setValue("cpf", "12.1346.135-34");
 										Mídia
 									</div>
 								</div>
-								<div class="item-list-default item-list-dashboard">
-									<div class="item-cell-list">
-										<span>12:00</span>
-										<span>06/05/2023</span>
-									</div>
-									<div class="item-cell-list">
-										<span>Enderson França da Silva</span>
-										<span>Edlene Soares França</span>
-									</div>
-									<div class="item-cell-list">
-										<span>61 991661398</span>
-										<span>61 993240414</span>
-									</div>
-									<div class="item-cell-list">
-										<span>Malu</span>
-									</div>
-									<div class="item-cell-list">
-										<span>Fachada</span>
-									</div>
-								</div>
-								<div class="item-list-default item-list-dashboard">
-									<div class="item-cell-list">
-										<span>14:00</span>
-										<span>01/05/2023</span>
-									</div>
-									<div class="item-cell-list">
-										<span>Maria Luiza Camargos Amorim</span>
-										<span>Rosa Camargos Amorim</span>
-									</div>
-									<div class="item-cell-list">
-										<span>61 993564645</span>
-										<span>61 983464356</span>
-									</div>
-									<div class="item-cell-list">
-										<span>Enderson</span>
-									</div>
-									<div class="item-cell-list">
-										<span>Indicação</span>
-									</div>
-								</div>
-								<div class="item-list-default item-list-dashboard">
-									<div class="item-cell-list">
-										<span>14:00</span>
-										<span>01/05/2023</span>
-									</div>
-									<div class="item-cell-list">
-										<span>Maria Luiza Camargos Amorim</span>
-										<span>Rosa Camargos Amorim</span>
-									</div>
-									<div class="item-cell-list">
-										<span>61 993564645</span>
-										<span>61 983464356</span>
-									</div>
-									<div class="item-cell-list">
-										<span>Enderson</span>
-									</div>
-									<div class="item-cell-list">
-										<span>Indicação</span>
-									</div>
-								</div>
-								<div class="item-list-default item-list-dashboard">
-									<div class="item-cell-list">
-										<span>14:00</span>
-										<span>01/05/2023</span>
-									</div>
-									<div class="item-cell-list">
-										<span>Maria Luiza Camargos Amorim</span>
-										<span>Rosa Camargos Amorim</span>
-									</div>
-									<div class="item-cell-list">
-										<span>61 993564645</span>
-										<span>61 983464356</span>
-									</div>
-									<div class="item-cell-list">
-										<span>Enderson</span>
-									</div>
-									<div class="item-cell-list">
-										<span>Indicação</span>
-									</div>
-								</div>
-								<div class="item-list-default item-list-dashboard">
-									<div class="item-cell-list">
-										<span>14:00</span>
-										<span>01/05/2023</span>
-									</div>
-									<div class="item-cell-list">
-										<span>Maria Luiza Camargos Amorim</span>
-										<span>Rosa Camargos Amorim</span>
-									</div>
-									<div class="item-cell-list">
-										<span>61 993564645</span>
-										<span>61 983464356</span>
-									</div>
-									<div class="item-cell-list">
-										<span>Enderson</span>
-									</div>
-									<div class="item-cell-list">
-										<span>Indicação</span>
-									</div>
-								</div>
-								<div class="item-list-default item-list-dashboard">
-									<div class="item-cell-list">
-										<span>14:00</span>
-										<span>01/05/2023</span>
-									</div>
-									<div class="item-cell-list">
-										<span>Maria Luiza Camargos Amorim</span>
-										<span>Rosa Camargos Amorim</span>
-									</div>
-									<div class="item-cell-list">
-										<span>61 993564645</span>
-										<span>61 983464356</span>
-									</div>
-									<div class="item-cell-list">
-										<span>Enderson</span>
-									</div>
-									<div class="item-cell-list">
-										<span>Indicação</span>
-									</div>
-								</div>
-								<div class="item-list-default item-list-dashboard">
-									<div class="item-cell-list">
-										<span>14:00</span>
-										<span>01/05/2023</span>
-									</div>
-									<div class="item-cell-list">
-										<span>Maria Luiza Camargos Amorim</span>
-										<span>Rosa Camargos Amorim</span>
-									</div>
-									<div class="item-cell-list">
-										<span>61 993564645</span>
-										<span>61 983464356</span>
-									</div>
-									<div class="item-cell-list">
-										<span>Enderson</span>
-									</div>
-									<div class="item-cell-list">
-										<span>Indicação</span>
-									</div>
-								</div>
-								<div class="item-list-default item-list-dashboard">
-									<div class="item-cell-list">
-										<span>14:00</span>
-										<span>01/05/2023</span>
-									</div>
-									<div class="item-cell-list">
-										<span>Maria Luiza Camargos Amorim</span>
-										<span>Rosa Camargos Amorim</span>
-									</div>
-									<div class="item-cell-list">
-										<span>61 993564645</span>
-										<span>61 983464356</span>
-									</div>
-									<div class="item-cell-list">
-										<span>Enderson</span>
-									</div>
-									<div class="item-cell-list">
-										<span>Indicação</span>
-									</div>
-								</div>
-								<div class="item-list-default item-list-dashboard">
-									<div class="item-cell-list">
-										<span>14:00</span>
-										<span>01/05/2023</span>
-									</div>
-									<div class="item-cell-list">
-										<span>Maria Luiza Camargos Amorim</span>
-										<span>Rosa Camargos Amorim</span>
-									</div>
-									<div class="item-cell-list">
-										<span>61 993564645</span>
-										<span>61 983464356</span>
-									</div>
-									<div class="item-cell-list">
-										<span>Enderson</span>
-									</div>
-									<div class="item-cell-list">
-										<span>UPanfletagem</span>
-									</div>
+								<div class="items-list-dashboard">
+									
 								</div>
 							</div>
 						</div>

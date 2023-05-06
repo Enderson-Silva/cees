@@ -62,7 +62,7 @@ body {
 	height: 60px;
 	border-radius: 4px;
 	border: 2px solid var(--color-error-two);
-	display: flex;
+	display:none;
 	padding: 5px;
 }
 
