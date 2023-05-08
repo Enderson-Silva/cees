@@ -1,15 +1,22 @@
 export default class Login {
 	constructor(){
 		this.main;
-		this.run();
+	}
+
+	async run(main){
+		this.setInstance(main);
+
+		let isActive = await this.main.isActive();
+
+		if(isActive){
+			this.main.render.renderAfterLogin();
+			this.main.showAlert(1, "Login realizado com sucesso!");
+		}
+		this.setEvents();
 	}
 
 	setInstance(main){
 		this.main = main;
-	}
-
-	async run(){
-		this.setEvents();
 	}
 
 	setEvents(){
@@ -53,6 +60,7 @@ export default class Login {
 
 		if(result["sucess"]){
 			this.main.render.renderAfterLogin(result['data']);
+			this.main.showAlert(1, "Login realizado com sucesso!");
 		}else{
 			alert("sdfg");
 		}

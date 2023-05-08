@@ -53,17 +53,26 @@ body {
 
 /*Alert*/
 
-.show-alert {
+.alerts-content {
 	position: fixed;
+	right: 0px;
 	top: 65px;
-	right: 10px;
+	pointer-events: none;
+	height: 100vh;
+}
+
+.show-alert {
+	position: relative;
+	right: -100%;
 	background: var(--color-error-one);
 	width: 300px;
 	height: 60px;
 	border-radius: 4px;
 	border: 2px solid var(--color-error-two);
-	display:none;
+	display: flex;
 	padding: 5px;
+	transition: right 0.8s;
+	margin-bottom: 5px;
 }
 
 .show-alert .icon-alert {
@@ -932,6 +941,26 @@ main > header {
 }
 
 /*list comercial*/
+
+.status-agendamento {
+	background: linear-gradient(to right, #00bbd9, #49d3f2);
+}
+
+.status-pendente {
+	background: linear-gradient(to right, #d96500, #f2a649);
+}
+
+.status-sem-interesse {
+	background: linear-gradient(to right, #d90000, #f24949);
+}
+
+.status-matricula {
+	background: linear-gradient(to right, #07d900, #4cf249);
+}
+
+.status-inativo {
+	background: linear-gradient(to right, #919090, #b8b8b8);
+}
 
 .list-comercial {
 	margin-top: 10px;

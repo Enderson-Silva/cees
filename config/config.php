@@ -30,3 +30,7 @@ define("HOST", "localhost");
 define("USERNAME", "root");
 define("PASSWORD", "");
 define("DATABASE", "cees");
+
+/*Set timezone*/
+
+date_default_timezone_set("America/Sao_Paulo");

@@ -25,13 +25,7 @@ $temp->setValue("cpf", "12.1346.135-34");
 <body>
 	<div class="general">
 		<div class="fixed-screens">
-			<div class="show-alert">
-				<div class="icon-alert">
-					<img src="resources/img/icon-check.svg"/>
-				</div>
-				<div class="message-alert">
-					<p>Houve um erro ao executar essa ação. Tente novamente!</p>
-				</div>
+			<div class="alerts-content">
 			</div>
 			<div class="login-background">
 				<div class="login">
@@ -72,7 +66,7 @@ $temp->setValue("cpf", "12.1346.135-34");
 									  <path d="M8 11v-4a4 4 0 0 1 8 0v4" />
 									</svg>
 								</div>
-								<input type="text" placeholder="Digite sua senha" name="form-login-password" autocomplete="off"/>
+								<input type="password" placeholder="Digite sua senha" name="form-login-password" autocomplete="off"/>
 							</div>
 							<div class="button-form-login">
 								Entrar
@@ -92,8 +86,8 @@ $temp->setValue("cpf", "12.1346.135-34");
 							<span>Principal (obrigatório)</span>
 						</div>
 						<div class="input-contact-content">
-							<input type="text" placeholder="Nome" name="" autocomplete="off">
-							<input type="text" placeholder="(00) 00000-0000" name="" autocomplete="off"/>
+							<input type="text" placeholder="Nome" minlength="3" maxlength="35" name="" autocomplete="off">
+							<input type="text" placeholder="(00) 00000-0000" minlength="15" maxlength="15" name="" autocomplete="off"/>
 						</div>
 					</div>
 					<div class="contact-two">
@@ -102,8 +96,8 @@ $temp->setValue("cpf", "12.1346.135-34");
 							<span>Secundário (opicional)</span>
 						</div>
 						<div class="input-contact-content">
-							<input type="text" placeholder="Nome" name="" autocomplete="off">
-							<input type="text" placeholder="(00) 00000-0000" name="" autocomplete="off"/>
+							<input type="text" placeholder="Nome" minlength="3" maxlength="35" name="" autocomplete="off">
+							<input type="text" placeholder="(00) 00000-0000" minlength="15" maxlength="15" name="" autocomplete="off"/>
 						</div>
 					</div>
 					<div class="date-time">
@@ -194,7 +188,7 @@ $temp->setValue("cpf", "12.1346.135-34");
 					<div class="block-statistic">
 						<div class="infos-statistic">
 							<div class="left-statistic">
-								<span>23/50</span>
+								<span>00/50</span>
 								<span>Matrículas</span>
 							</div>
 							<div class="right-statistic">
@@ -206,7 +200,7 @@ $temp->setValue("cpf", "12.1346.135-34");
 								<img src="resources/img/icon-time.svg"/>
 							</div>
 							<div class="text-time-statistic">
-								Faltam 28 dias
+								Faltam 0 dias
 							</div>
 						</div>
 					</div>
@@ -232,7 +226,7 @@ $temp->setValue("cpf", "12.1346.135-34");
 					<div class="block-statistic">
 						<div class="infos-statistic">
 							<div class="left-statistic">
-								<span>0/25</span>
+								<span>00/25</span>
 								<span>Matrículas</span>
 							</div>
 							<div class="right-statistic">
@@ -308,23 +302,23 @@ $temp->setValue("cpf", "12.1346.135-34");
 							<table class="table-narrative">
 								<tr>
 									<td>Agendamentos</td>
-									<td>10</td>
+									<td>0</td>
 								</tr>
 								<tr>
 									<td>Visitas</td>
-									<td>5</td>
+									<td>0</td>
 								</tr>
 								<tr>
 									<td>Atendimentos</td>
-									<td>3</td>
+									<td>0</td>
 								</tr>
 								<tr>
 									<td>Matrículas</td>
-									<td>1</td>
+									<td>0</td>
 								</tr>
 								<tr>
 									<td>Faturamento</td>
-									<td>100,00</td>
+									<td>00,00</td>
 								</tr>
 							</table>
 						</div>
@@ -336,23 +330,23 @@ $temp->setValue("cpf", "12.1346.135-34");
 							<table class="table-narrative">
 								<tr>
 									<td>Agendamentos</td>
-									<td>10</td>
+									<td>0</td>
 								</tr>
 								<tr>
 									<td>Visitas</td>
-									<td>5</td>
+									<td>0</td>
 								</tr>
 								<tr>
 									<td>Atendimentos</td>
-									<td>3</td>
+									<td>0</td>
 								</tr>
 								<tr>
 									<td>Matrículas</td>
-									<td>1</td>
+									<td>0</td>
 								</tr>
 								<tr>
 									<td>Faturamento</td>
-									<td>100,00</td>
+									<td>00,00</td>
 								</tr>
 							</table>
 						</div>
@@ -393,80 +387,8 @@ $temp->setValue("cpf", "12.1346.135-34");
 							Opções
 						</div>
 					</div>
-					<div class="item-list-default  item-list-comercial">
-						<div class="item-cell-list">
-							<span>12:00</span>
-							<span>06/05/2023</span>
-						</div>
-						<div class="item-cell-list">
-							<span>Enderson França da Silva</span>
-							<span>Edlene Soares França</span>
-						</div>
-						<div class="item-cell-list">
-							<span>61 991661398</span>
-							<span>61 993240414</span>
-						</div>
-						<div class="item-cell-list">
-							<span style="background: blue;">Agendamento</span>
-						</div>
-						<div class="item-cell-list">
-							<span>Fachada</span>
-						</div>
-						<div class="item-cell-list">
-							<img src="resources/img/icon-plus.svg"/>
-							<img src="resources/img/icon-edit.svg"/>
-							<img src="resources/img/icon-trash.svg"/>
-						</div>
-					</div>
-					<div class="item-list-default  item-list-comercial">
-						<div class="item-cell-list">
-							<span>14:00</span>
-							<span>01/05/2023</span>
-						</div>
-						<div class="item-cell-list">
-							<span>Maria Luiza Camargos Amorim</span>
-							<span>Rosa Camargos Amorim</span>
-						</div>
-						<div class="item-cell-list">
-							<span>61 993564645</span>
-							<span>61 983464356</span>
-						</div>
-						<div class="item-cell-list">
-							<span style="background: red;">Sem Interesse</span>
-						</div>
-						<div class="item-cell-list">
-							<span>Indicação</span>
-						</div>
-						<div class="item-cell-list">
-							<img src="resources/img/icon-plus.svg"/>
-							<img src="resources/img/icon-edit.svg"/>
-							<img src="resources/img/icon-trash.svg"/>
-						</div>
-					</div>
-					<div class="item-list-default  item-list-comercial">
-						<div class="item-cell-list">
-							<span>08:00</span>
-							<span>05/05/2023</span>
-						</div>
-						<div class="item-cell-list">
-							<span>Dayanne Amorim souza</span>
-							<span>Afonso Pereira</span>
-						</div>
-						<div class="item-cell-list">
-							<span>61 985645566</span>
-							<span>61 997555464</span>
-						</div>
-						<div class="item-cell-list">
-							<span style="background: green;">Matrícula</span>
-						</div>
-						<div class="item-cell-list">
-							<span>Macro</span>
-						</div>
-						<div class="item-cell-list">
-							<img src="resources/img/icon-plus.svg"/>
-							<img src="resources/img/icon-edit.svg"/>
-							<img src="resources/img/icon-trash.svg"/>
-						</div>
+					<div class="items-list-comercial">
+
 					</div>
 				</div>
 			</div>
