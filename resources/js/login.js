@@ -1,6 +1,8 @@
 export default class Login {
 	constructor(){
 		this.main;
+
+		this.optionsProfile = false;
 	}
 
 	async run(main){
@@ -44,6 +46,26 @@ export default class Login {
 			let password = document.getElementsByName("form-login-password")[0].value;
 			this.checkLogin(name, password);
 		});
+
+		//login out
+
+		let loginOn = document.querySelector(".login-on");
+		let optionsProfile = document.querySelector(".options-profile");
+		let iconLogout = document.querySelector(".options-profile img:nth-child(2)");
+
+		loginOn.addEventListener("click", () => {
+			if(!this.optionsProfile){
+				optionsProfile.style.display = "flex";
+				this.optionsProfile = true;
+			}else{
+				optionsProfile.style.display = "none";
+				this.optionsProfile = false;
+			}
+		});
+
+		iconLogout.addEventListener("click", () => {
+			this.logout();
+		});
 	}
 
 	async checkLogin(name, password){
@@ -62,7 +84,15 @@ export default class Login {
 			this.main.render.renderAfterLogin(result['data']);
 			this.main.showAlert(1, "Login realizado com sucesso!");
 		}else{
-			alert("sdfg");
+			this.main.showAlert(3, "Login ou senha incorreto.");
 		}
+	}
+
+	logout(){
+		return new Promise(async resolve => {
+			let fetchLogout = await fetch("app/logout.php");
+
+			location.reload();
+		});
 	}
 }

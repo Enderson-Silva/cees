@@ -86,8 +86,8 @@ $temp->setValue("cpf", "12.1346.135-34");
 							<span>Principal (obrigatório)</span>
 						</div>
 						<div class="input-contact-content">
-							<input type="text" placeholder="Nome" minlength="3" maxlength="35" name="" autocomplete="off">
-							<input type="text" placeholder="(00) 00000-0000" minlength="15" maxlength="15" name="" autocomplete="off"/>
+							<input type="text" placeholder="Nome" minlength="3" maxlength="35" name="name-contact-one-comercial" autocomplete="off">
+							<input type="text" placeholder="(00) 00000-0000" minlength="15" maxlength="15" name="number-contact-one-comercial" autocomplete="off"/>
 						</div>
 					</div>
 					<div class="contact-two">
@@ -96,34 +96,33 @@ $temp->setValue("cpf", "12.1346.135-34");
 							<span>Secundário (opicional)</span>
 						</div>
 						<div class="input-contact-content">
-							<input type="text" placeholder="Nome" minlength="3" maxlength="35" name="" autocomplete="off">
-							<input type="text" placeholder="(00) 00000-0000" minlength="15" maxlength="15" name="" autocomplete="off"/>
+							<input type="text" placeholder="Nome" minlength="3" maxlength="35" name="name-contact-two-comercial" autocomplete="off">
+							<input type="text" placeholder="(00) 00000-0000" minlength="15" maxlength="15" name="number-contact-two-comercial" autocomplete="off"/>
 						</div>
 					</div>
 					<div class="date-time">
-						<input type="date" name="">
-						<input type="time" name="">
+						<input type="date" name="date-comercial">
+						<input type="time" name="time-comercial">
 					</div>
 					<div class="status-tag">
 						<div class="status">
 							<span>Status</span>
-							<select>
-								<option selected>Inativo</option>
-								<option>Agendamento</option>
-								<option>Pendente</option>
-								<option>Sem Interesse</option>
-								<option>Matrícula</option>
+							<select class="status-select-comercial">
+								<option value="inativo" selected>Inativo</option>
+								<option value="agendamento">Agendamento</option>
+								<option value="pendente">Pendente</option>
+								<option value="sem interesse">Sem Interesse</option>
+								<option value="matrícula">Matrícula</option>
 							</select>
 						</div>
 						<div class="etiqueta">
 							<span>Etiqueta</span>
-							<select>
-								<option selected disabled>Selecione</option>
-								<option>Macro</option>
-								<option>Fachada</option>
-								<option>Indicação</option>
-								<option>Panfletagem</option>
-								<option>Outro</option>
+							<select class="tag-select-comercial">
+								<option value="macro" selected>Macro</option>
+								<option value="fachada">Fachada</option>
+								<option value="indicação">Indicação</option>
+								<option value="panfletagem">Panfletagem</option>
+								<option value="outro">Outro</option>
 							</select>
 						</div>
 					</div>
@@ -131,7 +130,7 @@ $temp->setValue("cpf", "12.1346.135-34");
 						<div class="title-description">
 							<span>Observação</span>
 						</div>
-						<textarea placeholder="Observação (opcional)"></textarea>
+						<textarea class="observation-textarea-comercial" placeholder="Observação (opcional)"></textarea>
 					</div>
 					<div class="buttons">
 						<span tabindex="2">Cancelar</span>
@@ -172,6 +171,10 @@ $temp->setValue("cpf", "12.1346.135-34");
 					</div>
 				</div>
 				<div class="profile">
+					<div class="options-profile">
+						<img src="resources/img/icon-settings.svg"/>
+						<img src="resources/img/icon-logout.svg"/>
+					</div>
 					<div class="icon-user">
 						<img src="resources/img/icon-user.svg"/>
 					</div>

@@ -90,8 +90,6 @@ export default class Render {
 				});
 				let dataDashboard = await fetchDataDashboard.json();
 
-				console.log(dataDashboard);
-
 				//Render blocks statistics
 
 				let blockEnrollment = document.querySelector(".block-statistic:nth-child(1) .left-statistic span:nth-child(1)");
@@ -185,8 +183,6 @@ export default class Render {
 					})
 				});
 				let dataDashboard = await fetchDataDashboard.json();
-
-				console.log(dataDashboard);
 
 				//Render blocks statistics
 
@@ -331,8 +327,6 @@ export default class Render {
 			});
 
 			let dataComercial = await fetchDataComercial.json();
-
-			console.log(dataComercial);
 
 			let fetchItemListHtml = await fetch("resources/include/html/item-list-comercial.html", {
 				cache: "no-cache"

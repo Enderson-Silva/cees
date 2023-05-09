@@ -59,6 +59,7 @@ body {
 	top: 65px;
 	pointer-events: none;
 	height: 100vh;
+	z-index: 9999;
 }
 
 .show-alert {
@@ -558,6 +559,26 @@ main > header {
 	display: flex;
 	align-items: center;
 	margin-right: 10px;
+	position: relative;
+}
+
+.options-profile {
+	position: absolute;
+	background: #dedede;
+	display: none;
+	align-items: center;
+	justify-content: space-around;
+	top: 100%;
+	left: calc(50% - 40px);
+	border-radius: 3px;
+	width: 80px;
+	height: 40px;
+	box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.options-profile img {
+	width: 25px;
+	cursor: pointer;
 }
 
 .icon-user {
@@ -579,11 +600,11 @@ main > header {
 
 .login-off, .login-on {
 	margin-left: 10px;
+	cursor: pointer;
 }
 
 .login-off {
 	display: block;
-	cursor: pointer;
 }
 
 .login-on {
