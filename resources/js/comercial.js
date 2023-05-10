@@ -37,6 +37,19 @@ export default class Comercial {
 		buttonSaveFormNewRecord.addEventListener("click", () => {
 			this.editOrInsert();
 		});
+
+		//set keyup
+
+		let numberOne = document.getElementsByName("number-contact-one-comercial")[0];
+		let numberTwo = document.getElementsByName("number-contact-two-comercial")[0];
+
+		numberOne.addEventListener("keyup", () => {
+			this.formatNumber(numberOne);
+		});
+
+		numberTwo.addEventListener("keyup", () => {
+			this.formatNumber(numberTwo);
+		});
 	}
 
 	openAndCloseFormNewRecord(status){
@@ -132,5 +145,10 @@ export default class Comercial {
 
 			console.log(result);
 		});
+	}
+
+	formatNumber(element){
+		element.value = element.value.replace(/[^\d]/gi, "");
+		element.value = element.value.replace(/([0-9]{2})([0-9]{5})([0-9]{4})/, "($1) $2-$3");
 	}
 }
