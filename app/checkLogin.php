@@ -30,6 +30,8 @@ try{
 			setcookie("role", $result["role"], time() + (10*365*24*60*60), "/");
 			setcookie("photo", $result["photo"], time() + (10*365*24*60*60), "/");
 
+			require_once("updateGeneral.php");
+			
 			echo json_encode(["sucess" => true]);
 		}else{
 			echo json_encode(["error" => "Nome ou senha incorreto.", "sucess" => false]);

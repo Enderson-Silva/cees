@@ -14,9 +14,11 @@ export default class Render {
 	setNoneAllTabs(){
 		let dashboard = document.querySelector(".dashboard");
 		let comercial = document.querySelector(".records");
+		let contract = document.querySelector(".contract");
 
 		dashboard.style.display = "none";
 		comercial.style.display = "none";
+		contract.style.display = "none";
 	}
 
 	selectRender(index){
@@ -26,6 +28,9 @@ export default class Render {
 			break;
 			case 1:
 				this.renderComercial();
+			break;
+			case 4:
+				this.renderContract();
 			break;
 			default:
 			this.main.showAlert(2, "Função temporariamente indisponível.");
@@ -289,7 +294,7 @@ export default class Render {
 		return new Promise(async resolve => {
 			try{
 				this.setNoneAllTabs();
-				let comercial = document.querySelector(".records").style.display = "block";
+				document.querySelector(".records").style.display = "block";
 				this.renderStatusComercial(0);
 			}catch(error){
 
@@ -303,18 +308,23 @@ export default class Render {
 			switch(index){
 				case 0:
 					tab = "agendamento";
+					this.main.comercial.category = 0;
 				break;
 				case 1:
 					tab = "pendente";
+					this.main.comercial.category = 1;
 				break;
 				case 2:
 					tab = "sem interesse";
+					this.main.comercial.category = 2;
 				break;
 				case 3:
 					tab = "matrícula";
+					this.main.comercial.category = 3;
 				break;
 				case 4:
 					tab = "inativo";
+					this.main.comercial.category = 4;
 				break;
 			}
 
@@ -374,7 +384,21 @@ export default class Render {
 				listComercial.innerHTML += itemList;
 			});
 
+			let itemsComercialTrash = document.querySelectorAll(".item-list-comercial .item-cell-list:nth-last-child(1) img:nth-last-child(1)");
+			console.log(itemsComercialTrash);
+			console.log(dataComercial);
 
+			itemsComercialTrash.forEach((element, index) => {
+				element.addEventListener("click", () => {
+					this.main.comercial.deleteItem(dataComercial[index]["id"]);
+				});
+			});
 		});
+	}
+
+	renderContract(){
+		this.setNoneAllTabs();
+
+		document.querySelector(".contract").style.display = "flex";
 	}
 }

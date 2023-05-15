@@ -51,6 +51,35 @@ body {
 	z-index: 999;
 }
 
+/*loading*/
+
+.loading-background {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(255, 255, 255, 0.3);
+	display: none;
+	align-items: center;
+	justify-content: center;
+}
+
+.loading-background > img {
+	transform: scale(0);
+	transition: transform 0.5s;
+}
+
+.icon-loading-small {
+	background: #e0e0e0;
+	border-radius: 15px;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+
+.icon-loading-small img {
+	width: 80px;
+}
+
 /*Alert*/
 
 .alerts-content {
@@ -74,6 +103,9 @@ body {
 	padding: 5px;
 	transition: right 0.8s;
 	margin-bottom: 5px;
+	cursor: pointer;
+
+	pointer-events: auto;
 }
 
 .show-alert .icon-alert {
@@ -98,6 +130,75 @@ body {
 	vertical-align: middle;
 }
 
+/*confirm*/
+
+.confirm-background {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.5);
+	display: none;
+	align-items: center;
+	justify-content: center;
+}
+
+.confirm {
+	width: 300px;
+	height: 200px;
+	background: white;
+	border-radius: 5px;
+	transform: scale(0);
+	transition: transform 0.3s;
+}
+
+.confirm-title {
+	background-color: var(--color-black-two);
+	height: 25%;
+	padding: 10px;
+	color: white;
+	display: flex;
+	align-items: center;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.confirm-text {
+	height: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 15px;
+	border-bottom: 1px solid var(--color-border-succinct);
+}
+
+.confirm-text p {
+	text-align: justify;
+}
+
+.confirm-buttons {
+	height: 25%;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	font-size: 0.8em;
+}
+
+.confirm-buttons span:nth-child(1){
+	background: var(--color-error-one);
+	padding: 10px 20px;
+	font-weight: bold;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.confirm-buttons span:nth-child(2){
+	background: var(--color-check-one);
+	padding: 10px 20px;
+	font-weight: bold;
+	border-radius: 3px;
+	cursor: pointer;
+}
 /*login*/
 
 .login-background {
@@ -116,6 +217,8 @@ body {
 	background: white;
 	border-radius: 4px;
 	display: flex;
+	transform: scale(0);
+	transition: transform 0.3s;
 }
 
 .login-left {
@@ -257,6 +360,8 @@ body {
 	"buttons buttons";
 	grid-row-gap: 15px;
 	grid-column-gap: 15px;
+	transform: scale(0);
+	transition: transform 0.3s;
 }
 
 .title-form {
@@ -1090,3 +1195,54 @@ main > header {
 	font-size: calc(0.7em + 1px);
 }
 
+/*Contract*/
+
+.contract {
+	width: 100%;
+	height: calc(100% - 60px);
+	display: none;
+	justify-content: center;
+	overflow-y: auto;
+	padding: 15px 0px;
+}
+
+.contract-infos {
+	width: 60%;
+	min-height: 130%;
+	background: #ededed;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.contract-title {
+	height: 60px;
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	border-bottom: 2px solid var(--color-border-succinct);
+	margin-bottom: 20px;
+}
+
+.contract-title span {
+	font-size: 1.3em;
+}
+
+.contract .inputs-student {
+	margin-bottom: 20px;
+}
+
+.contract .inputs-responsible {
+	margin-bottom: 20px;
+}
+
+.contract .inputs-contact {
+	margin-bottom: 20px;
+}
+
+.contract .inputs-address {
+	margin-bottom: 20px;
+}
+
+.contract .inputs-course {
+	margin-bottom: 20px;
+}

@@ -89,6 +89,14 @@ class Main {
 
 		newAlert.append(newIconAlert, newMsgAlert);
 
+		newAlert.addEventListener("click", () => {
+			newAlert.style.right = "-100%";
+
+			setTimeout(() => {
+				newAlert.remove();
+			}, 820);
+		}, {once: true});
+
 		let alertsContent = document.querySelector(".alerts-content");
 		let alerts = document.querySelectorAll(".show-alert")[0];
 
@@ -105,6 +113,36 @@ class Main {
 				newAlert.remove();
 			}, 820);
 		}, 4*1000);
+	}
+
+	confirm(title, text){
+		return new Promise(async resolve => {
+			let confirmBackground = document.querySelector(".confirm-background");
+			let confirm = document.querySelector(".confirm");
+			let confirmTitle = document.querySelector(".confirm-title span");
+			let confirmText = document.querySelector(".confirm-text p");
+			let confirmButtons = document.querySelectorAll(".confirm-buttons span");
+
+			confirmTitle.innerText = title;
+			confirmText.innerText = text;
+
+			confirmBackground.style.display = "flex";
+			setTimeout(() => {
+				confirm.style.transform = "scale(1)";
+			}, 10);	
+
+			confirmButtons[0].addEventListener("click", () => {
+				confirmBackground.style.display = "none";
+				confirm.style.transform = "scale(0)";
+				resolve(false);
+			}, {once: true});
+
+			confirmButtons[1].addEventListener("click", () => {
+				confirmBackground.style.display = "none";
+				confirm.style.transform = "scale(0)";
+				resolve(true)
+			}, {once: true});
+		});
 	}
 }
 

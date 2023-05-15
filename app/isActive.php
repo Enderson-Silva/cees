@@ -10,6 +10,8 @@ try{
 	}else{
 		echo json_encode(["sucess" => false]);
 	}
+
+	require_once("updateGeneral.php");
 }catch(Exception $error){
 	echo json_encode(["error" => "Houve um erro ao fazer login.", "sucess" => false]);
 }

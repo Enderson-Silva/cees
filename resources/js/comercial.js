@@ -1,6 +1,11 @@
 export default class Comercial {
 	constructor(){
 		this.main;
+
+		this.statusButtonNewRecord = true;
+		this.statusButtonEdit = true;
+
+		this.category = 1;
 	}
 
 	async run(main){
@@ -29,13 +34,17 @@ export default class Comercial {
 
 		let buttonCancelFormNewRecord = document.querySelector(".form-comercial .buttons span");
 		buttonCancelFormNewRecord.addEventListener("click", () => {
-			this.openAndCloseFormNewRecord(0);
+			if(this.statusButtonNewRecord){
+				this.openAndCloseFormNewRecord(0);
+			}
 		});
 
 		let buttonSaveFormNewRecord = document.querySelector(".form-comercial > .buttons > span:nth-child(2)");
 
 		buttonSaveFormNewRecord.addEventListener("click", () => {
-			this.editOrInsert();
+			if(this.statusButtonNewRecord){
+				this.editOrInsert();
+			}
 		});
 
 		//set keyup
@@ -54,10 +63,15 @@ export default class Comercial {
 
 	openAndCloseFormNewRecord(status){
 		let interfaceNewRecord = document.querySelector(".new-record-comercial-background");
+		let formComercial = document.querySelector(".form-comercial");
 		if(status){
 			interfaceNewRecord.style.display = "flex";
+			setTimeout(() => {
+				formComercial.style.transform = "scale(1)";
+			}, 10);
 		}else{
 			interfaceNewRecord.style.display = "none";
+			formComercial.style.transform = "scale(0)";
 		}
 	}
 
@@ -112,6 +126,8 @@ export default class Comercial {
 			let tag = document.querySelector(".tag-select-comercial");
 			let observation = document.querySelector(".observation-textarea-comercial");
 
+			this.statusButtonNewRecord = false;
+
 			let fetchSaveRecord = await fetch("app/saveNewRecord.php", {
 				method: "post",
 				body: JSON.stringify({
@@ -129,6 +145,8 @@ export default class Comercial {
 
 			let result = await fetchSaveRecord.json();
 
+			this.statusButtonNewRecord = true;
+
 			if(result){
 				this.main.showAlert(1, "Novo registro adicionado com sucesso!");
 			}else{
@@ -139,16 +157,33 @@ export default class Comercial {
 			nameTwo[0].value = "";
 			numberOne[0].value = "";
 			numberTwo[0].value = "";
-			date[0].value = "0000-00-00";
 			time[0].value = "00:00";
 			observation.value = "";
-
-			console.log(result);
 		});
 	}
 
 	formatNumber(element){
 		element.value = element.value.replace(/[^\d]/gi, "");
 		element.value = element.value.replace(/([0-9]{2})([0-9]{5})([0-9]{4})/, "($1) $2-$3");
+	}
+
+	async deleteItem(item){
+		let confirm = await this.main.confirm("Excluir cadastro comercial", "Ao excluir esse cadastro, não será possível recupera-lô!");
+
+		if(!confirm) return;
+
+		let fetchDeleteComercial = await fetch("app/delete.php", {
+			method: "post",
+			body: JSON.stringify({
+				id: item,
+				table: "comercial"
+			})
+		});
+
+		 let result = await fetchDeleteComercial.json()
+
+		this.main.showAlert(1, result['message']);
+
+		this.main.render.renderStatusComercial(this.category);
 	}
 }

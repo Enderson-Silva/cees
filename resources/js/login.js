@@ -27,14 +27,19 @@ export default class Login {
 
 		let buttonEnter = document.querySelector(".login-off");
 		let loginLayout = document.querySelector(".login-background");
+		let login = document.querySelector(".login");
 
 		buttonEnter.addEventListener("click", () => {
 			loginLayout.style.display = "flex";
+			setTimeout(() => {
+				login.style.transform = "scale(1)";
+			}, 10);
 		});
 
 		loginLayout.addEventListener("click", (event) => {
 			if(event.target !== loginLayout) return;
 			loginLayout.style.display = "none";
+			login.style.transform = "scale(0)";
 		});
 
 		//login enter

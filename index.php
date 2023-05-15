@@ -1,6 +1,6 @@
 <?php
 
-require("vendor/autoload.php");
+/*require("vendor/autoload.php");
 
 $temp = new \PhpOffice\PhpWord\TemplateProcessor('base.docx');
 
@@ -8,7 +8,7 @@ $temp->setValue("nome", "Enderson");
 $temp->setValue("idade", "18");
 $temp->setValue("cpf", "12.1346.135-34");
 //$temp->saveAs("enderson.docx");
-
+*/
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +25,24 @@ $temp->setValue("cpf", "12.1346.135-34");
 <body>
 	<div class="general">
 		<div class="fixed-screens">
+			<div class="loading-background">
+				<img src="resources/img/icon-loading-animation.svg"/>
+			</div>
 			<div class="alerts-content">
+			</div>
+			<div class="confirm-background">
+				<div class="confirm">
+					<div class="confirm-title">
+						<span>{title}</span>
+					</div>
+					<div class="confirm-text">
+						<p>{text}</p>
+					</div>
+					<div class="confirm-buttons">
+						<span>Cancelar</span>
+						<span>Confirmar</span>
+					</div>
+				</div>
 			</div>
 			<div class="login-background">
 				<div class="login">
@@ -393,6 +410,47 @@ $temp->setValue("cpf", "12.1346.135-34");
 					<div class="items-list-comercial">
 
 					</div>
+				</div>
+			</div>
+			<div class="contract">
+				<div class="contract-infos">
+					<div class="contract-title">
+						<span>Contrato</span>
+					</div>
+					<div class="inputs-student">
+						<input type="text" placeholder="nome aluno" name="">
+						<input type="date" placeholder="data nascimento aluno" name="">
+						<input type="text" placeholder="cpf aluno" name="">
+					</div>
+					<div class="inputs-responsible">
+						<input type="text" placeholder="nome responsavel financeiro" name="">
+						<input type="text" placeholder="rg responsável financeiro" name="">
+						<input type="text" placeholder="SSP repsonsavel financeiro" name="">
+						<input type="text" placeholder="cpf responsavel financeiro" name="">
+					</div>
+					<div class="inputs-contact">
+						<input type="text" placeholder="numero para contato 1" name="">
+						<input type="text" placeholder="numero para contato 2" name="">
+						<input type="text" placeholder="numero para contato 3" name="">
+					</div>
+					<div class="inputs-address">
+						<input type="text" placeholder="endereço" name="">
+						<input type="text" placeholder="cep" name="">
+					</div>
+					<div class="inputs-course">
+						<input type="text" placeholder="curso" name="">
+						<input type="text" placeholder="data de inicio" name="">
+						<input type="text" placeholder="carga horária" name="">
+						<input type="text" placeholder="dia do curso" name="">
+						<input type="text" placeholder="horario do curso" name="">
+					</div>
+					
+					<input type="text" placeholder="total do curso" name="">
+					<input type="text" placeholder="nome aluno" name="">
+					<input type="text" placeholder="nome aluno" name="">
+					<input type="text" placeholder="nome aluno" name="">
+					<input type="text" placeholder="nome aluno" name="">
+					<input type="text" placeholder="nome aluno" name="">
 				</div>
 			</div>
 		</main>
