@@ -9,7 +9,8 @@ try{
 	exit();
 }
 
-$query1 = $con->prepare("UPDATE comercial SET status=:status WHERE date_visit < :date_now");
+$query1 = $con->prepare("UPDATE comercial SET status=:status WHERE date_visit < :date_now AND status=:status2");
 $query1->bindValue(":status", "pendente");
+$query1->bindValue(":status2", "agendamento");
 $query1->bindValue(":date_now", date("Y-m-d"));
 $query1->execute();
