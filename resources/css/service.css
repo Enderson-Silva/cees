@@ -1,0 +1,219 @@
+/*service*/
+
+.service {
+	width: 100%;
+	height: calc(100% - 60px);
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/*menu service*/
+
+.service .bar-menu {
+	width: 100%;
+	height: 60px;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin-bottom: 30px;
+}
+
+.service .bar-menu li {
+	height: 100%;
+	border-bottom: 3px solid var(--color-secondary);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0px 10px;
+}
+
+.service .bar-menu li span:nth-child(1) img {
+	width: 16px;
+	margin-right: 10px;
+	user-select: none;
+}
+
+.service .bar-menu li span:nth-child(2){
+	cursor: pointer;
+	margin-right: 10px;
+	user-select: none;
+}
+
+/*content service*/
+
+.content-service {
+	width: 100%;
+	height: calc(100% - 90px);
+	padding: 0px 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.title-form {
+	height: 40px;
+	border-bottom: 1px solid var(--color-succinct);
+	margin-bottom: 30px;
+}
+
+.form-content {
+	width: 100%;
+	height: 100%;
+}
+
+.form-default {
+	width: 100%;
+	height: 100%;
+}
+
+.form-pre-cadastro {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-areas: "nome nome nascimento"
+						 "telefone cpf rg"
+						 "botoes botoes botoes";
+}
+
+.form-pre-cadastro .input-name {
+	grid-area: nome;
+}
+
+.form-pre-cadastro .input-birth {
+	grid-area: nascimento;
+}
+
+.form-pre-cadastro .input-phone {
+	grid-area: telefone;
+}
+
+.form-pre-cadastro .input-cpf {
+	grid-area: cpf;
+}
+
+.form-pre-cadastro .input-rg {
+	grid-area: rg;
+}
+
+.input-default {
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+}
+
+.input-default input {
+	border: 1px solid var(--color-succinct);
+	height: 30px;
+	border-radius: 5px;
+	text-indent: 15px;
+	font-size: 1.1em;
+}
+
+.buttons-pre-cadastro {
+	grid-area: botoes;
+	justify-self: center;
+	align-self: center;
+
+}
+
+.buttons-default button {
+	width: 300px;
+	height: 35px;
+	border: 0px;
+	font-size: 1.1em;
+	background: var(--color-secondary);
+	border-radius: 4px;
+	color: white;
+	cursor: pointer;
+}
+
+/*Brinde*/
+
+.form-brinde {
+	display: grid;
+	grid-template-areas: "codigo"
+						 "botoes";
+}
+
+.form-brinde .input-codigo {
+	grid-area: codigo;
+	align-self: center;
+	justify-self: center;
+}
+
+.form-brinde .input-codigo input {
+	height: 40px;
+	width: 600px;
+}
+
+.buttons-brinde {
+	grid-area: botoes;
+	justify-self: center;
+	align-self: center;
+
+}
+
+/*bolsa*/
+
+.form-bolsa {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: "left right"
+						 "buttons buttons";
+						 grid-template-rows: calc(100% - 50px) 50px;
+}
+
+.left-bolsa, .right-bolsa {
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.left-bolsa {
+	grid-area: left;
+}
+
+.right-bolsa {
+	grid-area: right;
+}
+
+.buttons-bolsa {
+	grid-area: buttons;
+	justify-self: center;
+	align-self: center;
+}
+
+.inputs-check-bolsa {
+	padding: 0px 10px;
+}
+
+.check-bolsa {
+	margin-bottom: 5px;
+	border: 1px solid var(--color-succinct);
+	border-radius: 5px;
+	padding: 5px;
+}
+
+.indication-bolsa {
+	padding: 10px;
+}
+
+.inputs-indication {
+	display: flex;
+	justify-content: space-between;
+}
+
+.inputs-indication input {
+	width: 49%;
+	height: 30px;
+	border-radius: 5px;
+	border: 1px solid var(--color-succinct);
+	text-indent: 10px;
+}

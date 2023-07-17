@@ -25,12 +25,6 @@ try{
 			$_SESSION['name'] = $result["name"];
 			$_SESSION['nickname'] = $result["nickname"];
 			$_SESSION['role'] = $result["role"];
-
-			setcookie("nickname", $result["nickname"], time() + (10*365*24*60*60), "/");
-			setcookie("role", $result["role"], time() + (10*365*24*60*60), "/");
-			setcookie("photo", $result["photo"], time() + (10*365*24*60*60), "/");
-
-			require_once("updateGeneral.php");
 			
 			echo json_encode(["sucess" => true]);
 		}else{
