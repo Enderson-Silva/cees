@@ -1,9 +1,5 @@
-class Login {
-	constructor(){
-		alert("foi chamada");
-	}
-
-	async verifyLogin(){
+var login = {
+	verifyLogin: async () => {
 
 		let inputs = {
 			name: document.getElementById("nameForm"),
@@ -11,7 +7,9 @@ class Login {
 		}
 
 
-		if(!this.validationInputs(inputs)) return;
+		if(!login.validationInputs(inputs)){
+			return;
+		}
 
 		let fetchVerify = await fetch("app/checkLogin.php", {
 			method: "post",
@@ -21,21 +19,29 @@ class Login {
 			})
 		});
 
-		let result = await fetchVerify.json();
-		console.log(result);
-		if(result["sucess"]) window.location.replace(`${window.location.origin}/Projetos/cees-main/dashboard.php`);
-	}
+		let resultVerify = await fetchVerify.json();
+		console.log(resultVerify);
+		if(!resultVerify["sucess"]){
+			return;
+		}
 
-	validationInputs(inputs){
+		let fetchData = await fetch("app/data.php", {
+			method: "post"
+		});
+
+		let resultData = await fetchData.json();
+
+		localStorage.setItem("pages_acess", JSON.stringify(resultData['pages_acess']));
+
+		window.location.replace(`${window.location.origin}/Projetos/cees-main/dashboard.php`);
+	},
+
+	validationInputs: (inputs) => {
 
 		let nameValue = inputs.name.value;
 		let passwordValue = inputs.password.value;
-
-
 
 		return true;
 		
 	}
 }
-
-var login = new Login();

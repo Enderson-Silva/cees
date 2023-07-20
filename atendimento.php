@@ -25,56 +25,7 @@
 				<span>Navegação</span>
 			</div>
 			<ul class="menu">
-				<li>
-					<div class="option-menu">
-						<div class="icon-and-text-li">
-							<div class="icon-li-menu">
-								<img src="resources/img/icon-home.svg"/>
-							</div>
-							<div class="text-li">Dashboard</div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="option-menu">
-						<div class="icon-and-text-li">
-							<div class="icon-li-menu">
-								<img src="resources/img/icon-calendar.svg"/>
-							</div>
-							<div class="text-li">Comercial</div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="option-menu">
-						<div class="icon-and-text-li">
-							<div class="icon-li-menu">
-								<img src="resources/img/icon-people.svg"/>
-							</div>
-							<div class="text-li">Matrículas</div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="option-menu">
-						<div class="icon-and-text-li">
-							<div class="icon-li-menu">
-								<img src="resources/img/icon-cube.svg"/>
-							</div>
-							<div class="text-li">Atendimento</div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="option-menu">
-						<div class="icon-and-text-li">
-							<div class="icon-li-menu">
-								<img src="resources/img/icon-book.svg"/>
-							</div>
-							<div class="text-li">Contrato</div>
-						</div>
-					</div>
-				</li>
+				
 			</ul>
 		</nav>
 		<main>
@@ -105,7 +56,7 @@
 				</div>
 			</header>
 			<div class="service">
-				<ul class="bar-menu">
+				<ul class="bar-menu bar-menu-service">
 					<li>
 						<span><img src="resources/img/atendimento/pre-cadastro.svg"></span>
 						<span>Pré Cadastro</span>
@@ -125,12 +76,32 @@
 				</ul>
 				<div class="content-service">
 					<div class="title-form">
-						<h1>Matricular novo aluno</h1>
+						<h1>Pré Cadastro</h1>
 					</div>
 					<div class="form-content">
-						<div class="form-default form-matricular">
-							<div class="buttons-default buttons-matricular">
-								<button>Solicitar bolsa</button>
+						<div class="form-default form-pre-cadastro">
+							<div class="input-default input-name">
+								<span>Nome</span>
+								<input type="text" />
+							</div>
+							<div class="input-default input-birth">
+								<span>Data de nascimento</span>
+								<input type="date" />
+							</div>
+							<div class="input-default input-phone">
+								<span>Número de telefone</span>
+								<input type="text" />
+							</div>
+							<div class="input-default input-cpf">
+								<span>CPF</span>
+								<input type="text" />
+							</div>
+							<div class="input-default input-rg">
+								<span>RG</span>
+								<input type="text" />
+							</div>
+							<div class="buttons-default buttons-pre-cadastro">
+								<button>Cadastrar</button>
 							</div>
 						</div>
 					</div>
@@ -138,5 +109,7 @@
 			</div>
 		</main>
 	</div>
+
+	<script src="resources/js/atendimento.js"></script>
 </body>
 </html>

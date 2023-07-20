@@ -58,7 +58,7 @@
 .title-form {
 	height: 40px;
 	border-bottom: 1px solid var(--color-succinct);
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 }
 
 .form-content {
@@ -171,9 +171,6 @@
 	width: 100%;
 	height: 100%;
 	padding: 10px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
 }
 
 .left-bolsa {
@@ -184,10 +181,22 @@
 	grid-area: right;
 }
 
+.inputs-bolsa-left, .inputs-bolsa-right {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+}
+
 .buttons-bolsa {
 	grid-area: buttons;
 	justify-self: center;
 	align-self: center;
+}
+
+.estimative-value-client {
+	display: flex;
 }
 
 .inputs-check-bolsa {
@@ -216,4 +225,22 @@
 	border-radius: 5px;
 	border: 1px solid var(--color-succinct);
 	text-indent: 10px;
+}
+
+.loading-bolsa {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(255, 255, 255, 0.5);
+	top: 0px;
+	left: 0px;
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.loading-bolsa label {
+	font-size: 1.5em;
+	margin-top: 20px;
 }

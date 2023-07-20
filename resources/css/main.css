@@ -98,6 +98,11 @@ body {
 	background: var(--color-black-three);
 }
 
+.menu li a {
+	text-decoration: none;
+	color: #999999;
+}
+
 .option-menu {
 	height: 45px;
 }

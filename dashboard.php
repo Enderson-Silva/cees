@@ -11,8 +11,6 @@
 	<link rel="stylesheet" href="resources/css/general.css"/>
 	<link rel="stylesheet" href="resources/css/main.css"/>
 	<link rel="icon" href="resources/img/icon-cees.png"/>
-
-	<script defer type="module" src="resources/js/main.js"></script>
 </head>
 <body>
 	<div class="general">
@@ -275,5 +273,8 @@
 			</div>
 		</main>
 	</div>
+
+
+	<script src="resources/js/main.js"></script>
 </body>
 </html>

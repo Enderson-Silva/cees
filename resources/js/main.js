@@ -1,30 +1,5 @@
-import login from "./login.js";
-import render from "./render.js";
-import dashboard from "./dashboard.js";
-import comercial from "./comercial.js";
-
-class Main {
-	constructor(){
-		this.login = new login();
-		this.render = new render();
-		this.dashboard = new dashboard();
-		this.comercial = new comercial();
-
-		this.run();
-	}
-
-	async run(){
-		this.setInstance();
-	}
-
-	setInstance(){
-		this.login.run(this);
-		this.render.run(this);
-		this.dashboard.run(this);
-		this.comercial.run(this);
-	}
-
-	getCookie(name){
+var main = {
+	getCookie: (name) => {
 		let cookie = {};
 
 		document.cookie.split(";").forEach((element) => {
@@ -33,23 +8,9 @@ class Main {
 		});
 
 		return cookie[name];
-	}
+	},
 
-	isActive(){
-		return new Promise(async resolve => {
-			let isActive = await fetch("app/isActive.php");
-
-			let result = await isActive.json();
-
-			if(result['sucess']){
-				return resolve(true);
-			}else{
-				return resolve(false);
-			}
-		});
-	}
-
-	showAlert(style = 1, message){
+	showAlert: (style = 1, message) => {
 		let newAlert = document.createElement("div");
 		newAlert.setAttribute("class", "show-alert");
 
@@ -113,9 +74,9 @@ class Main {
 				newAlert.remove();
 			}, 820);
 		}, 4*1000);
-	}
+	},
 
-	confirm(title, text){
+	confirm: (title, text) => {
 		return new Promise(async resolve => {
 			let confirmBackground = document.querySelector(".confirm-background");
 			let confirm = document.querySelector(".confirm");
@@ -143,7 +104,35 @@ class Main {
 				resolve(true)
 			}, {once: true});
 		});
+	},
+
+	loadMenu: async () => {
+		let menu = document.querySelector(".menu");
+		let pagesAcess =  JSON.parse(localStorage.getItem("pages_acess"));
+		delete pagesAcess["id"];
+		delete pagesAcess["id_colaborador"];
+		console.log(pagesAcess);
+
+		let fetchLi = await fetch("resources/include/html/menu-li.html", {
+			cache: "no-cache"
+		});
+
+		let resultFetchLi = await fetchLi.text();
+		console.log(resultFetchLi);
+
+		menu.innerHTML = "";
+
+		for(var i = 0; i < Object.keys(pagesAcess).length; i++){
+
+			if(Object.values(pagesAcess)[i] == '1'){
+				let li = resultFetchLi.replace("{icon}", Object.keys(pagesAcess)[i]);
+				li = li.replace("{link}", `${Object.keys(pagesAcess)[i]}.php`);
+				li = li.replace("{name}", Object.keys(pagesAcess)[i].charAt(0).toUpperCase() + Object.keys(pagesAcess)[i].slice(1));
+
+				menu.innerHTML += li;
+			}
+		}
 	}
 }
 
-var main = new Main();
+main.loadMenu();

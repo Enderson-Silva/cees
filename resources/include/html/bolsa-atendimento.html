@@ -1,63 +1,83 @@
 <div class="form-default form-bolsa">
 	<div class="left-bolsa">
-		<div class="input-default input-bolsa">
-			<span>Estimativa de valor</span>
-			<input type="text" placeholder="Valor estimado para mensalidade"/>
+		<div class="inputs-bolsa-left">
+			<div class="estimative-value-client">
+				<div class="input-default input-bolsa">
+					<span>Cliente</span>
+					<input type="text" placeholder=""/>
+				</div>
+				<div class="input-default input-bolsa">
+					<span>Estimativa de valor</span>
+					<input type="text" placeholder="Valor estimado"/>
+				</div>
+			</div>
+			<div class="inputs-check-bolsa">
+				<div class="check-bolsa">
+					<input type="checkbox" name="">
+					<label>Estuda ou estudou em escola pública</label>
+				</div>
+				<div class="check-bolsa">
+					<input type="checkbox" name="">
+					<label>Possui o cadastro único</label>
+				</div>
+				<div class="check-bolsa">
+					<input type="checkbox" name="">
+					<label>Renda mensal inferior a 3 salários</label>
+				</div>
+				<div class="check-bolsa">
+					<input type="checkbox" name="">
+					<label>Benefíco de bandeira</label>
+				</div>
+			</div>
+			<div class="input-default input-bolsa">
+				<span>Interesse do aluno</span>
+				<input type="number" min="0"max="10" placeholder="0 á 10" />
+			</div>
 		</div>
-		<div class="inputs-check-bolsa">
-			<div class="check-bolsa">
-				<input type="checkbox" name="">
-				<label>Estuda ou estudou em escola pública</label>
-			</div>
-			<div class="check-bolsa">
-				<input type="checkbox" name="">
-				<label>Possui o cadastro único</label>
-			</div>
-			<div class="check-bolsa">
-				<input type="checkbox" name="">
-				<label>Renda mensal inferior a 3 salários</label>
-			</div>
-			<div class="check-bolsa">
-				<input type="checkbox" name="">
-				<label>Benefíco de bandeira</label>
-			</div>
-		</div>
-		<div class="input-default input-bolsa">
-			<span>Interesse do aluno</span>
-			<input type="number" min="0"max="10" placeholder="0 á 10" />
+		<div class="response-bolsa-left">
+			
 		</div>
 	</div>
 	<div class="right-bolsa">
-		<div class="indication-bolsa">
-			<label>Indicação 01</label>
-			<div class="inputs-indication">
-				<input type="text" placeholder="Nome"/>
-				<input type="text" placeholder="Número" />
+		<div class="inputs-bolsa-right">
+			<div class="indication-bolsa">
+				<label>Indicação 01</label>
+				<div class="inputs-indication">
+					<input type="text" placeholder="Nome"/>
+					<input type="text" placeholder="Número" />
+				</div>
+			</div>
+			<div class="indication-bolsa">
+				<label>Indicação 02</label>
+				<div class="inputs-indication">
+					<input type="text" placeholder="Nome"/>
+					<input type="text" placeholder="Número" />
+				</div>
+			</div>
+			<div class="indication-bolsa">
+				<label>Indicação 03</label>
+				<div class="inputs-indication">
+					<input type="text" placeholder="Nome"/>
+					<input type="text" placeholder="Número" />
+				</div>
+			</div>
+			<div class="indication-bolsa">
+				<label>Indicação 04</label>
+				<div class="inputs-indication">
+					<input type="text" placeholder="Nome"/>
+					<input type="text" placeholder="Número" />
+				</div>
 			</div>
 		</div>
-		<div class="indication-bolsa">
-			<label>Indicação 02</label>
-			<div class="inputs-indication">
-				<input type="text" placeholder="Nome"/>
-				<input type="text" placeholder="Número" />
-			</div>
-		</div>
-		<div class="indication-bolsa">
-			<label>Indicação 03</label>
-			<div class="inputs-indication">
-				<input type="text" placeholder="Nome"/>
-				<input type="text" placeholder="Número" />
-			</div>
-		</div>
-		<div class="indication-bolsa">
-			<label>Indicação 04</label>
-			<div class="inputs-indication">
-				<input type="text" placeholder="Nome"/>
-				<input type="text" placeholder="Número" />
-			</div>
+		<div class="response-bolsa-right">
+			
 		</div>
 	</div>
 	<div class="buttons-default buttons-bolsa">
 		<button>Solicitar bolsa</button>
+	</div>
+	<div class="loading-bolsa">
+		<img src="resources/img/icon-loading-animation.svg"/>
+		<label>SOLICITANDO...</label>
 	</div>
 </div>

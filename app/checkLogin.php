@@ -25,6 +25,7 @@ try{
 			$_SESSION['name'] = $result["name"];
 			$_SESSION['nickname'] = $result["nickname"];
 			$_SESSION['role'] = $result["role"];
+			$_SESSION['id'] = $result["id"];
 			
 			echo json_encode(["sucess" => true]);
 		}else{
