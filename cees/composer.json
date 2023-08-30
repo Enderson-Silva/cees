@@ -1,0 +1,15 @@
+{
+    "name": "cees/mvc",
+    "description": "Gerenciador de dependências",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Enderson"
+        }
+    ],
+    "require": {}
+}
